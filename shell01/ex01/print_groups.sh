@@ -1,2 +1,2 @@
 #!/bin/bash
-groups $FT_USER | sed 's/^[^:]*:/ /' | sed 's/^ *//' | tr ' ' ','
+id -Gn $FT_USER | tr ' ' ','
