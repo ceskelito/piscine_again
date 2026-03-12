@@ -6,7 +6,7 @@
 /*   By: rceschel <rceschel@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 10:17:40 by rceschel          #+#    #+#             */
-/*   Updated: 2026/03/12 13:39:43 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/03/12 13:43:51 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	inner_cicle(int a, int b)
 		}
 		c++;
 	}
-
 }
 
 void	ft_print_comb(void)
@@ -66,7 +65,7 @@ void	ft_print_comb(void)
 	write(1, "\n", 1);
 }
 
-int	main( void )
-{
-	ft_print_comb();
-}
+// int	main( void )
+// {
+// 	ft_print_comb();
+// }
