@@ -6,7 +6,7 @@
 /*   By: rceschel <rceschel@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 10:18:52 by rceschel          #+#    #+#             */
-/*   Updated: 2026/03/12 10:35:07 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/03/12 13:46:39 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_reverse_alphabet(void)
+void	ft_print_numbers(void)
 {
 	char	curr;
 
@@ -28,7 +28,7 @@ void	ft_print_reverse_alphabet(void)
 		curr++;
 	}
 }
-//
+
 // int main( void ) {
-// 	ft_print_alphabet();
+// 	ft_print_numbers();
 // }

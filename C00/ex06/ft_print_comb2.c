@@ -6,7 +6,7 @@
 /*   By: rceschel <rceschel@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 10:17:40 by rceschel          #+#    #+#             */
-/*   Updated: 2026/03/12 13:43:51 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/03/12 14:12:15 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,10 @@ void	inner_cicle(int a, int b)
 	}
 }
 
-void	ft_print_comb(void)
+void	ft_print_comb2(void)
 {
 	int	a;
 	int	b;
-	int	c;
-	int	d;
 
 	a = '0';
 	while (a <= '9')
