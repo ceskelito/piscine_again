@@ -3,31 +3,20 @@ CC        = gcc
 MKDIR     = mkdir -p
 RM        = rm -f
 CFLAGS    = -Wall -Wextra -Werror
-# IFLAGS    = -Iincludes
 
-FILES     = main
-
-SRCS_DIR  = srcs
-OBJS_DIR  = objs
-
-SRCS      = $(addsuffix .cpp, $(FILES))
-OBJS      = $(addprefix $(OBJS_DIR)/, $(addsuffix .o, $(FILES)))
-
-vpath %.c $(SRCS_DIR)
+SRCS = main.c
+OBJS = $(SRCS:%.c=%.o)
 
 all: $(NAME)
 
-$(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
+%.o: %.c
 	$(CC) -c $(IFLAGS) $(CFLAGS) $< -o $@
 
 $(NAME): $(OBJS)
 	$(CC) $^ -o $@
 
-$(OBJS_DIR):
-	$(MKDIR) $@
-
 clean:
-	$(RM) -r $(OBJS_DIR)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
