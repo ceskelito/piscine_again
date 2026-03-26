@@ -3,12 +3,9 @@ CC        = gcc
 MKDIR     = mkdir -p
 RM        = rm -f
 CFLAGS    = -Wall -Wextra -Werror
-# IFLAGS    = -Iincludes
 
-SRCS = $(NAME).c
+SRCS = ft_cat.c
 OBJS = $(SRCS:%.c=%.o)
-
-vpath %.c $(SRCS_DIR)
 
 all: $(NAME)
 
