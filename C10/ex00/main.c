@@ -6,7 +6,7 @@
 /*   By: rceschel <rceschel@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 20:17:58 by rceschel          #+#    #+#             */
-/*   Updated: 2026/03/25 20:34:49 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/03/26 11:55:50 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,12 @@ int	main(int ac, char *av[])
 	if (throw_argc_error(ac))
 		return (0);
 	fd = open(av[1], O_RDONLY);
-	bytes_read = read(fd, buff, BUFF_SIZE);
+	bytes_read = read(fd, buff, BUFF_SIZE - 1);
 	if (throw_cannot_read_error(bytes_read))
 		return (0);
 	while (bytes_read > 0 && buff[0])
 	{
-		write(STDOUT_FILENO, buff, BUFF_SIZE);
-		bytes_read = read(fd, buff, BUFF_SIZE);
+		write(STDOUT_FILENO, buff, bytes_read);
+		bytes_read = read(fd, buff, BUFF_SIZE - 1);
 	}
 }
